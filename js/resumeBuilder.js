@@ -8,7 +8,7 @@ var bio = {
     blog: "blog.owenlarosa.com",
     location: "Somerville, MA"
   },
-  picture_url: "/images/owen.jpg",
+  picture_url: "images/owen.jpg",
   welcome_message: "Hello, I'm a mobile developer and proud Udacian!",
   skills: [
     "Swift", "Java", "web development", "SQL", "curriculum planning"
@@ -31,4 +31,16 @@ var formattedContacts = [
 
 formattedContacts.forEach(function(contactItem) {
   $("#topContacts").append(contactItem);
+});
+
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture_url);
+$("#header").append(formattedBioPic);
+
+var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcome_message);
+$("#header").append(formattedWelcomeMessage);
+
+$("#header").append(HTMLskillsStart);
+
+bio.skills.forEach(function(skill) {
+  $("#header").append(HTMLskills.replace("%data%", skill));
 });
