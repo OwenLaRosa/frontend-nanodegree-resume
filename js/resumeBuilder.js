@@ -122,6 +122,8 @@ $("#header").append(formattedWelcomeMessage);
 
 $("#header").append(HTMLskillsStart);
 
-bio.skills.forEach(function(skill) {
-  $("#header").append(HTMLskills.replace("%data%", skill));
-});
+if (bio.skills.length > 0) {
+  bio.skills.forEach(function(skill) {
+    $("#header").append(HTMLskills.replace("%data%", skill));
+  });
+}
