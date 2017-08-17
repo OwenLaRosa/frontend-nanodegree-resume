@@ -15,6 +15,87 @@ var bio = {
   ]
 };
 
+var work = {
+  jobs: [
+    {
+      employer: "Udacity",
+      title: "Student Experience Lead - iOS",
+      dates: "June 2017 - Present",
+      description: "Responsible for all things student experience in Udacity's iOS Offerings"
+    },
+    {
+      employer: "Udacity",
+      title: "Code Reviewer Community Lead, Mentor",
+      dates: "March 2015 - June 2017",
+      description: "Audited teaching assistants, reviewed projects, and mentored students"
+    }
+  ]
+};
+
+var education = {
+  "schools": [
+    {
+      "name": "University of Massachusetts, Lowell",
+      "degree": "Bachelors",
+      "subjects": ["Information Technology", "Business"],
+      "date": "Present",
+      "gpa": 4.0
+    },
+    {
+      "name": "Keystone National High School",
+      "degree": "High School",
+      "subjects": ["General Studies"],
+      "date": "2016",
+      "gpa": 4.0
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Udacity",
+      "degree": "Nanodegree",
+      "title": "React",
+      "date": "Present"
+    },
+    {
+      "name": "Udacity",
+      "degree": "Nanodegree",
+      "title": "Front-End Web Developer",
+      "date": "Present"
+    },
+    {
+      "name": "Udacity",
+      "degree": "Nanodegree",
+      "title": "Android Developer",
+      "date": "2017"
+    },
+    {
+      "name": "Udacity",
+      "degree": "Nanodegree",
+      "title": "iOS Developer",
+      "date": "2016"
+    }
+  ]
+};
+
+var projects = [
+  {
+    "title": "Udacians",
+    "date": "2017",
+    "description": "Social networking app for Udacity students for iOS and Android",
+    "images": [
+      "/images/udacians_banner.png"
+    ]
+  },
+  {
+    "title": "Newscaster",
+    "date": "2016",
+    "description": "RSS Reader app using text-to-speech",
+    "images": [
+      "/images/newscaster_logo.png"
+    ]
+  }
+];
+
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
