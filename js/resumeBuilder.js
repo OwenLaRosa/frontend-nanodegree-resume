@@ -1,5 +1,5 @@
 var bio = {
-  name: "Owen S. LaRosa",
+  name: "Owen LaRosa",
   role: "Mobile and Web Developer",
   contact: {
     email: "owen.larosa@gmail.com",
@@ -150,3 +150,12 @@ displayWork();
 $(document).click(function(loc) {
   logClicks(loc.pageX, loc.pageY);
 });
+
+function inName(name) {
+  var splitName = name.split(" ");
+  var firstName = splitName[0];
+  var lastName = splitName[1];
+  return firstName.charAt(0).toUpperCase() + firstName.slice(1, firstName.length).toLowerCase() + " " + lastName.toUpperCase();
+}
+
+$("#main").append(internationalizeButton);
