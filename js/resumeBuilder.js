@@ -83,7 +83,7 @@ var projects = [
     "date": "2017",
     "description": "Social networking app for Udacity students for iOS and Android",
     "images": [
-      "/images/udacians_banner.png"
+      "images/udacians_banner.png"
     ]
   },
   {
@@ -91,7 +91,7 @@ var projects = [
     "date": "2016",
     "description": "RSS Reader app using text-to-speech",
     "images": [
-      "/images/newscaster_logo.png"
+      "images/newscaster_logo.png"
     ]
   }
 ];
@@ -145,7 +145,21 @@ function displayWork() {
   });
 }
 
+projects.display = function() {
+  projects.forEach(function(project) {
+    $("#projects").append(HTMLprojectStart);
+    $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", project.title));
+    $(".project-entry:last").append(HTMLprojectDates.replace("%data%", project.date));
+    $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", project.description));
+
+    project.images.forEach(function(image) {
+      $(".project-entry:last").append(HTMLprojectImage.replace("%data%", image));
+    });
+  });
+}
+
 displayWork();
+projects.display();
 
 $(document).click(function(loc) {
   logClicks(loc.pageX, loc.pageY);
