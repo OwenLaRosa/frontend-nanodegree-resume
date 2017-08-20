@@ -142,6 +142,17 @@ var education = {
       var majors = HTMLschoolMajor.replace("%data%", school.majors.toString().replace(",", ", "));
       $('.education-entry:last').append(majors);
     });
+    $('#education').append(HTMLonlineClasses);
+    this.onlineCourses.forEach(function(course) {
+      $('#education').append(HTMLschoolStart);
+      var courseName = HTMLonlineTitle.replace("%data%", course.title);
+      var schoolName = HTMLonlineSchool.replace("%data%", course.school);
+      $('.education-entry:last').append(courseName + schoolName);
+      var courseDates = HTMLonlineDates.replace("%data%", course.dates);
+      $('.education-entry:last').append(courseDates);
+      var courseLink = HTMLonlineURL.replace("%data%", course.url);
+      $('.education-entry:last').append(courseLink);
+    });
   }
 };
 
