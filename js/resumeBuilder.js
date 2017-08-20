@@ -97,7 +97,7 @@ var education = {
     },
     {
       name: "Keystone National High School",
-      location: "Bloomingdale, PA",
+      location: "Bloomsburg, PA",
       degree: "High School",
       majors: ["General Studies"],
       dates: "2013 - 2016",
