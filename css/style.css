@@ -142,7 +142,7 @@ https://css-tricks.com/perfect-full-page-background-image/
 
 #topContacts {
   background: #ffffff;
-
+  border: 4px solid #9E9E9E;
 }
 
 .flex-box {
@@ -173,6 +173,8 @@ https://css-tricks.com/perfect-full-page-background-image/
 .app-icon-text {
   text-align: center;
   word-wrap: break-word;
+  user-select: none;
+  cursor: default;
 }
 
 .center-content {
