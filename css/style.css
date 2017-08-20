@@ -140,6 +140,11 @@ https://css-tricks.com/perfect-full-page-background-image/
   background-color: #484848;
 }
 
+#topContacts {
+  background: #ffffff;
+
+}
+
 .flex-box {
   display: -webkit-flex;
   display: flex;
@@ -154,6 +159,20 @@ https://css-tricks.com/perfect-full-page-background-image/
   flex-direction: column;
   flex-wrap: nowrap;
   padding: 10px;
+}
+
+.app-icon {
+  width: 64px;
+}
+
+.app-icon-image {
+  display: block;
+  margin: auto;
+}
+
+.app-icon-text {
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .center-content {

@@ -8,6 +8,13 @@ var bio = {
     twitter: "@OwenLaRosa",
     location: "Somerville, MA"
   },
+  links: {
+    mobile: "tel:+16178675309",
+    email: "mailto:owen.larosa@gmail.com",
+    twitter: "https://twitter.com/OwenLaRosa",
+    github: "https://github.com/OwenLaRosa",
+    location: "http://www.somervillema.gov"
+  },
   welcomeMessage: "Hello, I'm a mobile developer and proud Udacian!",
   skills: [
     "Swift", "Java", "web development", "SQL", "curriculum planning"
@@ -209,3 +216,40 @@ function inName(name) {
 $("#main").append(internationalizeButton);
 
 $("#mapDiv").append(googleMap);
+
+// normally, this would be static
+var previousTitle = null;
+function toggleAppTitleSelected(selected, title) {
+  if (previousTitle != null) {
+    // deselect previous app icon title
+    previousTitle.css('color', '#000000');
+    previousTitle.css('background-color', '#ffffff');
+    previousTitle = null;
+  }
+  if (selected) {
+    // highlight the title
+    title.css('color', '#ffffff');
+    title.css('background-color', '#0D47A1');
+    previousTitle = title;
+  }
+}
+
+// clicking within contacts area but outside an app icon should deselect the icon
+$('#topContacts').click(function(event) {
+  if (event.target == event.delegateTarget) {
+    // user selected anywhere except on one of the list items
+    toggleAppTitleSelected(false);
+  }
+});
+
+// single clicking will select the app icon
+$('.app-icon').click(function(event) {
+  var title = $(event.delegateTarget).children('p');
+  toggleAppTitleSelected(true, title);
+});
+
+// double clicking the app icon should open the link in a new tab
+$('.app-icon').dblclick(function(event) {
+  var type = $(event.delegateTarget).children('img').attr('alt');
+  window.open(bio.links[type]);
+});

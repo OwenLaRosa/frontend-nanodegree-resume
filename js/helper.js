@@ -15,13 +15,13 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span>%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span>%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span>%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span>%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span>%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span>%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span>%data%</span></li>';
+var HTMLcontactGeneric = '<li class="app-icon"><span class="orange-text">%contact%</span><span>%data%</span></li>';
+var HTMLmobile = '<li class="app-icon"><img class="app-icon-image" src="images/phone.png" alt="mobile"/><p class="app-icon-text">%data%</p></li>';
+var HTMLemail = '<li class="app-icon"><img class="app-icon-image" src="images/email.png" alt="email"/><p class="app-icon-text">%data%</p></li>';
+var HTMLtwitter = '<li class="app-icon"><img class="app-icon-image" src="images/twitter.png" alt="twitter"/><p class="app-icon-text">%data%</p></li>';
+var HTMLgithub = '<li class="app-icon"><img class="app-icon-image" src="images/github.png" alt="github"/><p class="app-icon-text">%data%</p></li>';
+var HTMLblog = '<li class="app-icon"><span class="orange-text">blog</span><p>%data%</p></li>';
+var HTMLlocation = '<li class="app-icon"><img class="app-icon-image" src="images/pin.png" alt="location"/><p class="app-icon-text">%data%</p></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
