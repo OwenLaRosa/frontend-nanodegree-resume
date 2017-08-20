@@ -133,7 +133,8 @@ var education = {
     this.schools.forEach(function(school) {
       $('#education').append(HTMLschoolStart);
       var schoolName = HTMLschoolName.replace("%data%", school.name);
-      $('.education-entry:last').append(schoolName);
+      var degree = HTMLschoolDegree.replace("%data%", school.degree);
+      $('.education-entry:last').append(schoolName + degree);
       var schoolDates = HTMLschoolDates.replace("%data%", school.dates);
       $('.education-entry:last').append(schoolDates);
       var schoolLocation = HTMLschoolLocation.replace("%data%", school.location);
