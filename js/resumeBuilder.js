@@ -90,45 +90,59 @@ var education = {
   "schools": [
     {
       "name": "University of Massachusetts, Lowell",
+      "location": "Lowell, MA",
       "degree": "Bachelors",
-      "subjects": ["Information Technology", "Business"],
-      "date": "Present",
-      "gpa": 4.0
+      "majors": ["Information Technology", "Business"],
+      "dates": "2016 - Present",
     },
     {
       "name": "Keystone National High School",
+      "location": "Bloomingdale, PA",
       "degree": "High School",
-      "subjects": ["General Studies"],
-      "date": "2016",
-      "gpa": 4.0
+      "majors": ["General Studies"],
+      "dates": "2013 - 2016",
     }
   ],
-  "certifications": [
+  "onlineCourses": [
     {
-      "name": "Udacity",
-      "degree": "Nanodegree",
-      "title": "React",
-      "date": "Present"
+      "title": "React Nanodegree",
+      "school": "Udacity",
+      "dates": "2017 - Present",
+      "url": "https://www.udacity.com/course/react-nanodegree--nd019"
     },
     {
-      "name": "Udacity",
-      "degree": "Nanodegree",
-      "title": "Front-End Web Developer",
-      "date": "Present"
+      "title": "Front-End Web Developer Nanodegree",
+      "school": "Udacity",
+      "dates": "2017 - Present",
+      "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     },
     {
-      "name": "Udacity",
-      "degree": "Nanodegree",
-      "title": "Android Developer",
-      "date": "2017"
+      "title": "Android Deeveloper Nanodegree",
+      "school": "Udacity",
+      "dates": "2016 - 2017",
+      "url": "https://www.udacity.com/course/android-developer-nanodegree-by-google--nd801"
     },
     {
-      "name": "Udacity",
-      "degree": "Nanodegree",
-      "title": "iOS Developer",
-      "date": "2016"
+      "title": "iOS Developer Nanodegree",
+      "school": "Udacity",
+      "dates": "2015 - 2015",
+      "url": "https://www.udacity.com/course/ios-developer-nanodegree--nd003"
     }
-  ]
+  ],
+  display: function() {
+    this.schools.forEach(function(school) {
+      $('#education').append(HTMLschoolStart);
+      var schoolName = HTMLschoolName.replace("%data%", school.name);
+      $('.education-entry:last').append(schoolName);
+      var schoolDates = HTMLschoolDates.replace("%data%", school.dates);
+      $('.education-entry:last').append(schoolDates);
+      var schoolLocation = HTMLschoolLocation.replace("%data%", school.location);
+      $('.education-entry:last').append(schoolLocation);
+      // add additional space after the comma when treating an array like a string
+      var majors = HTMLschoolMajor.replace("%data%", school.majors.toString().replace(",", ", "));
+      $('.education-entry:last').append(majors);
+    });
+  }
 };
 
 var projects = [
@@ -152,6 +166,7 @@ var projects = [
 
 bio.display();
 work.display();
+education.display();
 
 projects.display = function() {
   projects.forEach(function(project) {
