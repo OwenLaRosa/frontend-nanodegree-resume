@@ -157,42 +157,42 @@ var education = {
   }
 };
 
-var projects = [
-  {
-    "title": "Udacians",
-    "date": "2017",
-    "description": "Social networking app for Udacity students for iOS and Android",
-    "images": [
-      "images/udacians_banner.png"
-    ]
-  },
-  {
-    "title": "Newscaster",
-    "date": "2016",
-    "description": "RSS Reader app using text-to-speech",
-    "images": [
-      "images/newscaster_logo.png"
-    ]
+var projects = {
+  projects: [
+    {
+      "title": "Udacians",
+      "dates": "2016 - 2017",
+      "description": "Social networking app for Udacity students for iOS and Android",
+      "images": [
+        "images/udacians_banner.png"
+      ]
+    },
+    {
+      "title": "Newscaster",
+      "dates": "2016 - 2016",
+      "description": "RSS Reader app using text-to-speech",
+      "images": [
+        "images/newscaster_logo.png"
+      ]
+    }
+  ],
+  display: function() {
+    this.projects.forEach(function(project) {
+      $("#projects").append(HTMLprojectStart);
+      $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", project.title));
+      $(".project-entry:last").append(HTMLprojectDates.replace("%data%", project.dates));
+      $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", project.description));
+
+      project.images.forEach(function(image) {
+        $(".project-entry:last").append(HTMLprojectImage.replace("%data%", image));
+      });
+    });
   }
-];
+};
 
 bio.display();
 work.display();
 education.display();
-
-projects.display = function() {
-  projects.forEach(function(project) {
-    $("#projects").append(HTMLprojectStart);
-    $(".project-entry:last").append(HTMLprojectTitle.replace("%data%", project.title));
-    $(".project-entry:last").append(HTMLprojectDates.replace("%data%", project.date));
-    $(".project-entry:last").append(HTMLprojectDescription.replace("%data%", project.description));
-
-    project.images.forEach(function(image) {
-      $(".project-entry:last").append(HTMLprojectImage.replace("%data%", image));
-    });
-  });
-}
-
 projects.display();
 
 $(document).click(function(loc) {
