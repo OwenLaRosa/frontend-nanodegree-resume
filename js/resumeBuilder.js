@@ -1,18 +1,51 @@
 var bio = {
   name: "Owen LaRosa",
   role: "Mobile and Web Developer",
-  contact: {
+  contacts: {
+    mobile: "(617) - 867 - 5309",
     email: "owen.larosa@gmail.com",
-    twitter: "@OwenLaRosa",
     github: "OwenLaRosa",
-    blog: "blog.owenlarosa.com",
+    twitter: "@OwenLaRosa",
     location: "Somerville, MA"
   },
-  picture_url: "images/owen.jpg",
-  welcome_message: "Hello, I'm a mobile developer and proud Udacian!",
+  welcomeMessage: "Hello, I'm a mobile developer and proud Udacian!",
   skills: [
     "Swift", "Java", "web development", "SQL", "curriculum planning"
-  ]
+  ],
+  biopic: "images/owen.jpg",
+  display: function() {
+    var formattedName = HTMLheaderName.replace("%data%", this.name);
+    var formattedRole = HTMLheaderRole.replace("%data%", this.role);
+
+    $("#header").prepend(formattedRole);
+    $("#header").prepend(formattedName);
+
+    var formattedContacts = [
+      HTMLmobile.replace("%data%", this.contacts.mobile),
+      HTMLemail.replace("%data%", this.contacts.email),
+      HTMLgithub.replace("%data%", this.contacts.github),
+      HTMLtwitter.replace("%data%", this.contacts.twitter),
+      HTMLlocation.replace("%data%", this.contacts.location)
+    ];
+
+    formattedContacts.forEach(function(contactItem) {
+      $("#topContacts").append(contactItem);
+    });
+
+    var formattedBioPic = HTMLbioPic.replace("%data%", this.biopic);
+    $("#header").append(formattedBioPic);
+
+    var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
+    $("#header").append(formattedWelcomeMessage);
+
+    $("#header").append(HTMLskillsStart);
+
+    if (this.skills.length > 0) {
+      this.skills.forEach(function(skill) {
+        $("#header").append(HTMLskills.replace("%data%", skill));
+      });
+    }
+  }
 };
 
 var work = {
@@ -96,37 +129,7 @@ var projects = [
   }
 ];
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-
-var formattedContacts = [
-  HTMLemail.replace("%data%", bio.contact.email),
-  HTMLtwitter.replace("%data%", bio.contact.twitter),
-  HTMLgithub.replace("%data%", bio.contact.github),
-  HTMLblog.replace("%data%", bio.contact.blog),
-  HTMLlocation.replace("%data%", bio.contact.location)
-];
-
-formattedContacts.forEach(function(contactItem) {
-  $("#topContacts").append(contactItem);
-});
-
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture_url);
-$("#header").append(formattedBioPic);
-
-var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcome_message);
-$("#header").append(formattedWelcomeMessage);
-
-$("#header").append(HTMLskillsStart);
-
-if (bio.skills.length > 0) {
-  bio.skills.forEach(function(skill) {
-    $("#header").append(HTMLskills.replace("%data%", skill));
-  });
-}
+bio.display();
 
 function displayWork() {
   work.jobs.forEach(function(job) {
