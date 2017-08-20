@@ -87,46 +87,46 @@ var work = {
 };
 
 var education = {
-  "schools": [
+  schools: [
     {
-      "name": "University of Massachusetts, Lowell",
-      "location": "Lowell, MA",
-      "degree": "Bachelors",
-      "majors": ["Information Technology", "Business"],
-      "dates": "2016 - Present",
+      name: "University of Massachusetts, Lowell",
+      location: "Lowell, MA",
+      degree: "Bachelors",
+      majors: ["Information Technology", "Business"],
+      dates: "2016 - Present",
     },
     {
-      "name": "Keystone National High School",
-      "location": "Bloomingdale, PA",
-      "degree": "High School",
-      "majors": ["General Studies"],
-      "dates": "2013 - 2016",
+      name: "Keystone National High School",
+      location: "Bloomingdale, PA",
+      degree: "High School",
+      majors: ["General Studies"],
+      dates: "2013 - 2016",
     }
   ],
   "onlineCourses": [
     {
-      "title": "React Nanodegree",
-      "school": "Udacity",
-      "dates": "2017 - Present",
-      "url": "https://www.udacity.com/course/react-nanodegree--nd019"
+      title: "React Nanodegree",
+      school: "Udacity",
+      dates: "2017 - Present",
+      url: "https://www.udacity.com/course/react-nanodegree--nd019"
     },
     {
-      "title": "Front-End Web Developer Nanodegree",
-      "school": "Udacity",
-      "dates": "2017 - Present",
-      "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+      title: "Front-End Web Developer Nanodegree",
+      school: "Udacity",
+      dates: "2017 - Present",
+      url: "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     },
     {
-      "title": "Android Deeveloper Nanodegree",
-      "school": "Udacity",
-      "dates": "2016 - 2017",
-      "url": "https://www.udacity.com/course/android-developer-nanodegree-by-google--nd801"
+      title: "Android Deeveloper Nanodegree",
+      school: "Udacity",
+      dates: "2016 - 2017",
+      url: "https://www.udacity.com/course/android-developer-nanodegree-by-google--nd801"
     },
     {
-      "title": "iOS Developer Nanodegree",
-      "school": "Udacity",
-      "dates": "2015 - 2015",
-      "url": "https://www.udacity.com/course/ios-developer-nanodegree--nd003"
+      title: "iOS Developer Nanodegree",
+      school: "Udacity",
+      dates: "2015 - 2015",
+      url: "https://www.udacity.com/course/ios-developer-nanodegree--nd003"
     }
   ],
   display: function() {
@@ -160,18 +160,18 @@ var education = {
 var projects = {
   projects: [
     {
-      "title": "Udacians",
-      "dates": "2016 - 2017",
-      "description": "Social networking app for Udacity students for iOS and Android",
-      "images": [
+      title: "Udacians",
+      dates: "2016 - 2017",
+      description: "Social networking app for Udacity students for iOS and Android",
+      images: [
         "images/udacians_banner.png"
       ]
     },
     {
-      "title": "Newscaster",
-      "dates": "2016 - 2016",
-      "description": "RSS Reader app using text-to-speech",
-      "images": [
+      title: "Newscaster",
+      dates: "2016 - 2016",
+      description: "RSS Reader app using text-to-speech",
+      images: [
         "images/newscaster_logo.png"
       ]
     }
