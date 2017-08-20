@@ -53,16 +53,37 @@ var work = {
     {
       employer: "Udacity",
       title: "Student Experience Lead - iOS",
+      location: "Mountain View, CA",
       dates: "June 2017 - Present",
       description: "Responsible for all things student experience in Udacity's iOS Offerings"
     },
     {
       employer: "Udacity",
       title: "Code Reviewer Community Lead, Mentor",
+      location: "Salem, MA",
       dates: "March 2015 - June 2017",
       description: "Audited teaching assistants, reviewed projects, and mentored students"
     }
-  ]
+  ],
+  display: function() {
+    this.jobs.forEach(function(job) {
+      $("#workExperience").append(HTMLworkStart);
+
+      var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+      var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
+
+      $(".work-entry:last").append(formattedEmployer + formattedTitle);
+
+      var formattedLocation = HTMLworkLocation.replace("%data%", job.location);
+      $(".work-entry:last").append(formattedLocation);
+
+      var formattedDates = HTMLworkDates.replace("%data%", job.dates);
+      $(".work-entry:last").append(formattedDates);
+
+      var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
+      $(".work-entry:last").append(formattedDescription);
+    });
+  }
 };
 
 var education = {
@@ -130,23 +151,7 @@ var projects = [
 ];
 
 bio.display();
-
-function displayWork() {
-  work.jobs.forEach(function(job) {
-    $("#workExperience").append(HTMLworkStart);
-
-    var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
-    var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
-
-    $(".work-entry:last").append(formattedEmployer + formattedTitle);
-
-    var formattedDates = HTMLworkDates.replace("%data%", job.dates);
-    $(".work-entry:last").append(formattedDates);
-
-    var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
-    $(".work-entry:last").append(formattedDescription);
-  });
-}
+work.display();
 
 projects.display = function() {
   projects.forEach(function(project) {
@@ -161,7 +166,6 @@ projects.display = function() {
   });
 }
 
-displayWork();
 projects.display();
 
 $(document).click(function(loc) {
