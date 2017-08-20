@@ -14,6 +14,18 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  background-color: #009688;
+}
+
+body {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  background-color: white;
+}
+
 .clear-fix {
   overflow: auto;
 }
@@ -26,7 +38,6 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
   line-height: 48px;
   display: inline;
 }
@@ -95,12 +106,10 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #f3f3f3;
   line-height: 28px;
 }
 
 #skills-h3 {
-  color: #f5ae23;
   display: none;
 }
 
@@ -110,11 +119,6 @@ a {
 
 .orange-text {
   color: #f5ae23;
-}
-
-.white-text {
-  font-weight: bold;
-  color: #fff;
 }
 
 .gray {
@@ -127,8 +131,12 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
+/* full screen background image
+https://css-tricks.com/perfect-full-page-background-image/
+*/
 #header {
+  background: url(../images/clouds.jpg) no-repeat center center;
+  background-size: cover;
   background-color: #484848;
 }
 
