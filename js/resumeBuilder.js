@@ -158,7 +158,7 @@ var education = {
       $('.education-entry:last').append(courseName + schoolName);
       var courseDates = HTMLonlineDates.replace("%data%", course.dates);
       $('.education-entry:last').append(courseDates);
-      var courseLink = HTMLonlineURL.replace("%data%", course.url);
+      var courseLink = HTMLonlineURL.replace("#", course.url).replace("%data%", course.url);
       $('.education-entry:last').append(courseLink);
     });
   }
