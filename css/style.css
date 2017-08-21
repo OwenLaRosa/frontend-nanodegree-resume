@@ -254,3 +254,17 @@ span {
     display: block;
   }
 }
+
+/* text selection should be dark blue, with white text
+https://css-tricks.com/overriding-the-default-text-selection-color-with-css/
+*/
+
+::selection {
+  color: white;
+  background: #0D47A1;
+}
+
+::-moz-selection {
+  color: white;
+  background: #0D47A1;
+}
