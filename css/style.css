@@ -14,6 +14,21 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+/*
+For CSS gradient
+https://www.w3schools.com/css/css3_gradients.asp
+*/
+.titlebar {
+  color: white;
+  background: #0D47A1;
+  background: -webkit-linear-gradient(left, #0D47A1 , #BBDEFB);
+  background: -o-linear-gradient(right, #0D47A1, #BBDEFB);
+  background: -moz-linear-gradient(right, #0D47A1, #BBDEFB);
+  background: linear-gradient(to right, #0D47A1 , #BBDEFB);
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
 html {
   background-color: #009688;
 }
@@ -23,7 +38,12 @@ body {
   margin-right: 15%;
   margin-top: 32px;
   margin-bottom: 32px;
-  background-color: white;
+  padding: 4px;
+  background-color: #9E9E9E;
+}
+
+#main {
+  background: #9E9E9E;
 }
 
 .clear-fix {
@@ -45,9 +65,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
-  line-height: 29px;
-  padding: 10px;
+  color: #0D47A1;
 }
 
 h3 {
@@ -97,7 +115,7 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: #0D47A1;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -113,22 +131,10 @@ a {
   display: none;
 }
 
-.orange {
-  background-color: #f5ae23;
-}
-
-.orange-text {
-  color: #f5ae23;
-}
-
 .gray {
-  background-color: #f3f3f3;
+  background-color: #E0E0E0;
   padding-bottom: 10px;
   clear: both;
-}
-
-.dark-gray {
-  background-color: #4a4a4a;
 }
 
 /* full screen background image
