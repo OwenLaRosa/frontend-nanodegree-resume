@@ -153,6 +153,7 @@ https://css-tricks.com/perfect-full-page-background-image/
 #topContacts {
   background: #ffffff;
   border: 4px solid #9E9E9E;
+  margin-bottom: 8px;
 }
 
 .flex-box {
