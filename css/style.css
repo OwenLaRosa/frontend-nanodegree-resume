@@ -173,6 +173,7 @@ https://css-tricks.com/perfect-full-page-background-image/
 
 .app-icon {
   width: 64px;
+  user-select: none;
 }
 
 .app-icon-image {
