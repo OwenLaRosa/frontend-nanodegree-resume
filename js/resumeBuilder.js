@@ -207,7 +207,7 @@ $("#mapDiv").append(googleMap);
 // normally, this would be static
 var previousTitle = null;
 function toggleAppTitleSelected(selected, title) {
-  if (previousTitle != null) {
+  if (previousTitle !== null) {
     // deselect previous app icon title
     previousTitle.css('color', '#000000');
     previousTitle.css('background-color', '#ffffff');
